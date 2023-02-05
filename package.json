@@ -1,0 +1,23 @@
+{
+  "name": "complete-mongo-db-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quickheaven/complete-mongo-db-tutorial.git"
+  },
+  "author": "quickheaven",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quickheaven/complete-mongo-db-tutorial/issues"
+  },
+  "homepage": "https://github.com/quickheaven/complete-mongo-db-tutorial#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.0.0"
+  }
+}
