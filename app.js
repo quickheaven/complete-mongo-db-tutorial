@@ -4,6 +4,7 @@ const { connectToDb, getDb } = require('./db')
 
 // init app & middleware
 const app = express()
+app.use(express.json())
 
 // db connection
 let db
@@ -49,3 +50,17 @@ app.get('/books/:id', (req, res) => {
     }
 
 })
+
+app.post('/books', (req, res) => {
+    const book = req.body
+
+    db.collection('books')
+        .insertOne(book)
+        .then(result => {
+            res.status(201).json(result)
+        })
+        .catch(err => {
+            res.status(500).json({error: 'Could not create a new document'})
+        })
+})
+
